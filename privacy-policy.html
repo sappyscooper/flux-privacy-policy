@@ -12,10 +12,11 @@
         <div class="shell">
             <div class="brand">Flux</div>
             <h1>Privacy Policy</h1>
-            <p class="lede">Last updated: July 11, 2026</p>
+            <p class="lede">Last updated: July 17, 2026</p>
             <nav aria-label="Policy navigation">
                 <a href="index.html">Overview</a>
                 <a href="community-guidelines.html">Community Guidelines</a>
+                <a href="terms.html">Terms</a>
                 <a href="support.html">Support</a>
                 <a href="mailto:realfluxapp@gmail.com">Contact</a>
             </nav>
@@ -25,7 +26,7 @@
         <div class="shell">
             <section>
                 <h2>Overview</h2>
-                <p>Flux is a beta social wellness accountability app for iOS. Flux helps users track habits, post accountability updates, join squads, complete missions and challenges, and earn beta rewards.</p>
+                <p>Flux is a social wellness accountability app for iOS for adults aged 18 and above. Flux helps users track habits, post accountability updates, join squads, and complete verified challenges.</p>
                 <p>This policy explains what information Flux collects, how it is used, and how users can contact us about privacy or deletion requests.</p>
             </section>
             <section>
@@ -33,12 +34,12 @@
                 <ul>
                     <li>Account information, such as email address, authentication user id, display name, profile details, onboarding choices, wellness goals, preferences, and optional avatar or style settings.</li>
                     <li>Squad and group information, such as squad name, invite code, group membership, active squad goal, and member activity needed to show squad features.</li>
-                    <li>User-generated content, such as Pulse posts, captions, comments, kudos, reactions, and related timestamps.</li>
-                    <li>Safety information, such as reports, report reasons and optional notes, and private block relationships.</li>
-                    <li>App activity and beta progress data, such as app events, mission progress, challenge participation, challenge completion records, XP, FluxCoin balance, cosmetic inventory, and equipped profile items.</li>
+                    <li>User-generated content, such as Pulse posts, captions, comments, kudos, challenge proof images, reactions, and related timestamps.</li>
+                    <li>Safety information, such as terms acceptance, private reports, hidden-content choices, blocks, moderation status, and moderator actions.</li>
+                    <li>App activity and progress data, such as app events, mission progress, challenge participation, challenge completion records, XP, FluxCoin balance, cosmetic inventory, and equipped profile items.</li>
                     <li>Manually entered wellness data, such as sleep, meal, workout, or other habit logs that users choose to enter.</li>
                     <li>Optional Apple Health-derived information, only after the user grants permission.</li>
-                    <li>Local fallback data stored on the device when a user chooses local beta mode or when the app needs local-only beta storage.</li>
+                    <li>Optional Flux Ring wellness history stored locally on the device.</li>
                 </ul>
             </section>
             <section>
@@ -47,9 +48,10 @@
                     <li>Create and manage user accounts.</li>
                     <li>Provide squads, invite-code joining, group accountability, and social feed features.</li>
                     <li>Show Pulse posts, comments, kudos, and reactions according to selected visibility.</li>
-                    <li>Track missions, challenges, app events, XP, FluxCoins, profile style items, and beta rewards.</li>
+                    <li>Track missions, challenges, app events, XP, FluxCoins, profile style items, and in-app rewards.</li>
                     <li>Generate wellness and progress views from user-entered data and optional Apple Health-derived data.</li>
-                    <li>Process safety reports, enforce blocks, maintain app security, troubleshoot bugs, and improve reliability.</li>
+                    <li>Filter objectionable content, process private reports, hide reported content, enforce blocks, and maintain moderation records.</li>
+                    <li>Maintain app security, troubleshoot bugs, and improve reliability.</li>
                     <li>Support account, privacy, and deletion requests.</li>
                 </ul>
             </section>
@@ -57,50 +59,49 @@
                 <h2>Supabase And Backend Storage</h2>
                 <p>Flux uses Supabase for authentication and backend storage. Flux may store account, profile, squad, group membership, Pulse post, comment, kudos, mission, challenge, app event, reward, FluxCoin, and style inventory data in Supabase.</p>
                 <p>Supabase Auth is used for email/password and Sign in with Apple authentication. The app stores Supabase session tokens in the iOS Keychain on the device. Private backend administration credentials are not included in the iOS app.</p>
-                <p>For the current beta, raw Apple Health samples are not intended to be uploaded to Supabase. Flux may store derived wellness progress, app events, mission completions, challenge completions, or summary records needed to sync beta features.</p>
+                <p>Raw Apple Health samples and Flux Ring history remain on the device. Flux may store user-authored social updates, derived progress, app events, challenge records, or summary records needed to sync app features.</p>
             </section>
             <section>
                 <h2>Apple Health</h2>
                 <p>Apple Health access is optional. Users choose whether to connect Apple Health, and Flux reads Health data only after the user grants permission through iOS.</p>
                 <p>If permission is granted, Flux may read selected Health categories such as sleep, steps, workouts, activity, exercise, energy, recovery-related signals, or nutrition-related data, depending on what the user allows and what the app supports.</p>
                 <p>Flux uses Apple Health data for wellness scores, habit tracking, missions, and challenges. Health data is not automatically posted to feeds, squads, or public areas. Users must explicitly choose to share a Pulse or other post.</p>
-                <p>For the current beta, raw Apple Health samples should remain on the device. Flux is not a medical device and does not provide medical advice.</p>
+                <p>Raw Apple Health samples remain on the device. Flux is not a medical device and does not provide medical advice.</p>
             </section>
             <section>
                 <h2>User-Generated Content And Visibility</h2>
                 <p>Flux includes social and squad features. Users may create Pulse posts, comments, kudos, reactions, and squad activity.</p>
                 <p>Pulse visibility may include Public, Friends, or Squad. Public posts are visible in the public feed. Friends visibility is intended for friend-based visibility where supported. Squad posts are visible to members of the relevant squad or group.</p>
                 <p>Squad and group information, including posts or activity associated with a squad, may be visible to members of that squad. Invite codes are used to join squads. Users should avoid posting sensitive information they do not want others in the selected audience to see.</p>
-                <p>Users can report posts or accounts and block other users. Reports are private and used for moderation and safety review. Blocking removes social content and interaction between the two accounts where supported. Automated filtering is limited and does not replace reports or human review.</p>
+                <p>Build 9 does not offer anonymous posting. Every post is linked internally to an authenticated account. Users can privately report posts, comments, profiles, challenges, or proof; immediately hide posts; and block accounts in both directions. Reports receive a 24-hour response deadline and may lead to content removal or account restriction.</p>
             </section>
             <section>
-                <h2>Local Fallback And Beta Testing</h2>
-                <p>Flux includes a local fallback mode for beta testing. In local fallback mode, selected app data may be stored only on the device and may not sync across users or devices.</p>
-                <p>Local fallback data may include onboarding choices, local squad state, local posts, local mission progress, local rewards, or other beta state. Deleting the app may delete local-only data.</p>
+                <h2>Flux Ring</h2>
+                <p>Connecting a Flux Ring is optional. Ring wellness estimates and history remain local to the device, are not uploaded to Supabase, and are not written into Apple Health. Flux Ring information is for general wellness and is not a medical reading.</p>
             </section>
             <section>
                 <h2>FluxCoins And Payments</h2>
-                <p>FluxCoins are beta rewards used inside Flux. FluxCoins have no cash value, cannot be withdrawn, cannot be sold, and cannot be exchanged for money.</p>
+                <p>FluxCoins and Challenge Points are in-app rewards used inside Flux. They have no cash value, cannot be withdrawn, cannot be sold, and cannot be exchanged for money.</p>
                 <p>Flux currently does not include real-money payments or in-app purchases.</p>
             </section>
             <section>
                 <h2>Medical Disclaimer</h2>
-                <p>Flux is designed for wellness, habit tracking, social accountability, and beta experimentation. Flux is not medical advice, diagnosis, treatment, or a substitute for a qualified health professional.</p>
+                <p>Flux is designed for wellness, habit tracking, and social accountability. Flux is not medical advice, diagnosis, treatment, or a substitute for a qualified health professional.</p>
                 <p>Users should contact a qualified medical professional for medical questions, symptoms, diagnosis, treatment, or emergency concerns.</p>
             </section>
             <section>
                 <h2>Data Security</h2>
-                <p>Flux uses reasonable technical safeguards for the beta, including Supabase authentication, Row Level Security policies, HTTPS network requests, and iOS Keychain storage for Supabase session tokens.</p>
-                <p>No beta app or internet service can guarantee perfect security. Users should use strong passwords and avoid posting sensitive personal information in shared or public areas.</p>
+                <p>Flux uses reasonable technical safeguards, including Supabase authentication, Row Level Security policies, HTTPS network requests, and iOS Keychain storage for Supabase session tokens.</p>
+                <p>No app or internet service can guarantee perfect security. Users should use strong passwords and avoid posting sensitive personal information in shared or public areas.</p>
             </section>
             <section>
                 <h2>Data Retention And Deletion</h2>
-                <p>Flux retains account and social data while an account remains active and may retain limited operational records for security, abuse prevention, legal compliance, or backup recovery periods.</p>
-                <p>Users can permanently delete their account in Profile &gt; Settings &gt; Privacy &amp; Safety &gt; Delete Account. Deletion removes the authentication identity and related profile, posts, comments, friendships, memberships, challenge participation, rewards, and account data. A group may remain for other members after ownership is removed. Limited backups or security logs may persist until normal expiry.</p>
+                <p>Flux may retain backend data while an account remains active or while needed for security, moderation, debugging, or legal purposes.</p>
+                <p>Users can permanently delete their account in Profile &gt; Settings &gt; Account &gt; Delete Account, or contact us for privacy assistance. Some local-only data can be removed by deleting the app. Limited encrypted backups, security logs, or moderation records may persist for their normal retention period.</p>
             </section>
             <section>
                 <h2>Children</h2>
-                <p>Flux is not intended for children under 13. Users under the age required by their country or region should not use Flux without appropriate permission from a parent or guardian.</p>
+                <p>Flux is intended only for adults aged 18 and above. Build 9 requires users to affirm that they are at least 18 and accept the current Terms of Use and Community Guidelines before using authenticated app content. Flux does not use an external age-assurance framework or API.</p>
             </section>
             <section>
                 <h2>Changes To This Policy</h2>
